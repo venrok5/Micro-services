@@ -1,0 +1,23 @@
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Maven
+**/target/
+
+# Gradle
+**/.gradle/
+**/build/
+
+# macOS
+.DS_Store
+**/.DS_Store
+
+# Logs
+**/*.log
+
+# Environment
+.env
+**/.env

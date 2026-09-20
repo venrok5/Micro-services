@@ -1,0 +1,6 @@
+spring:
+  application:
+    name: Bank_REST
+
+  config:
+    import: optional:configserver:http://localhost:8888
