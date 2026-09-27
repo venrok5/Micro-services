@@ -3,7 +3,7 @@ server:
 
 spring:
   kafka:
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: kafka:29092
     consumer:
       group-id: notification-group
       key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
@@ -11,14 +11,15 @@ spring:
       properties:
         spring.json.trusted.packages: "*"
         spring.json.value.default.type: "com.example.notification_service_app.dto.NotificationEventDto"
+
   config:
-    import: optional:configserver:http://localhost:8888
-  
+    import: optional:configserver:http://external-config:8888
+
   mail:
     host: smtp.gmail.com
     port: 587
-    username: ${EMAIL_USERNAME:ebbinghaus.notifications@gmail.com}
-    password: ${EMAIL_PASSWORD:xevi tpvr dbcn ckbg}
+    username: ${EMAIL_USERNAME}
+    password: ${EMAIL_PASSWORD}
     properties:
       mail:
         smtp:
@@ -35,4 +36,4 @@ logging:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://discovery-service:8761/eureka/

@@ -3,4 +3,4 @@ spring:
     name: Bank_REST
 
   config:
-    import: optional:configserver:http://localhost:8888
+    import: optional:configserver:http://external-config:8888

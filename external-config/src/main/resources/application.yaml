@@ -10,4 +10,4 @@ spring:
     config:
       server:
         native:
-          search-locations: file:/Users/venrok/Documents/Develop/JavaProjects/Apps/config-repo
+          search-locations: file:/config-repo
